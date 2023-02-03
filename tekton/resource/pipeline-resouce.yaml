@@ -8,4 +8,4 @@ spec:
     - name: revision
       value: master
     - name: url
-      value: https://github.com/SaifRehman/nodejs-tekton-openshift
+      value: https://github.com/michealjack1/nodejs-tekton-openshift-1
