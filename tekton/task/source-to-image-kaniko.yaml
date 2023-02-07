@@ -18,6 +18,10 @@ spec:
         description: Url of image repository
       - name: imageTag
         description: Tag to apply to the built image
+  volumes:
+    - name: docker-config
+      configMap: 
+        name: docker-config
   steps:
     - name: npm-install
       image: node
@@ -68,7 +72,4 @@ spec:
         - --destination=$(inputs.params.imageUrl):$(inputs.params.imageTag)
         - --context=/workspace/git-source/$(inputs.params.pathToContext)
         - --skip-tls-verify
-  volumes:
-    - name: docker-config
-      configMap: 
-        name: docker-config
+
