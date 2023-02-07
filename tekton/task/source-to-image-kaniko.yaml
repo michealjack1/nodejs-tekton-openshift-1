@@ -19,9 +19,9 @@ spec:
       - name: imageTag
         description: Tag to apply to the built image
   volumes:
-    - name: docker-config
-      configMap: 
+    - configMap:
         name: docker-config
+      name: docker-config      
   steps:
     - name: npm-install
       image: node
